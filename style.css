@@ -298,7 +298,7 @@ header .ham-burger.active span:nth-child(2){
 }
 /*About Foods section*/
 .classes{
-    padding: 80px 15px;
+    padding: 80px 15px 50px 15px;
 }
 .classes .container{
     background: transparent;
@@ -379,10 +379,9 @@ header .ham-burger.active span:nth-child(2){
     padding: 0 0 10px;
     font-family: 'open Sans', sans-serif;
 }
-
 /*Schedule section*/
 .schedule{
-    padding: 80px 0px;
+    padding: 0 0 80px 0;
 }
 .schedule .container{
     background: transparent;
@@ -749,8 +748,10 @@ footer{
     }
 }
 /*TABLET RESPONSIVE*/
-@media screen and (max-width: 1100px)
-{
+@media screen and (max-width: 1100px){
+    .cursor,.cursor2{
+        display: none;
+    }
     header{
         position: fixed;
     }
