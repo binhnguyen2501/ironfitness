@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap');
 @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
-
+:root{
+    --dark-red: #bf0a2b;
+    --white: #f2f2f2;
+    --black: #0d0d0d; 
+}
 html{
     scroll-behavior: smooth;
 }
@@ -15,7 +19,7 @@ html{
 /*Header*/
 header{
     position: fixed;
-    background-color: black;
+    background: var(--black);
     left: 0px;
     top: 0px;
     width: 100%;
@@ -32,14 +36,14 @@ header .logo a{
     font-family: 'Nunito', sans-serif;
     text-decoration: none;
     font-weight: 700;
-    background: linear-gradient(to right, red, #c11325, #494964, #6f6f89);
+    background: linear-gradient(to right, var(--dark-red), #c11325, #494964, #6f6f89);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 header .nav{
     position: fixed;
     overflow: hidden;
-    background-color: #c11325;
+    background: var(--dark-red);
     width: 300px;
     top: 0;
     right: 0;
@@ -66,7 +70,7 @@ header .nav ul li a{
     text-decoration: none;
     font-size: 30px;
     font-weight: 500;
-    color: black;
+    color: var(--black);
     display: block;
     position: relative;
     padding: 0px 30px;
@@ -84,7 +88,7 @@ header .nav ul li a::before{
     height: 160%;
     width: 0px;
     opacity: .2;
-    background-color: black;
+    background: var(--black);
     transition: width .5s ease;
     z-index: -1;
 }
@@ -100,7 +104,7 @@ header .ham-burger span{
     height: 3px;
     margin-bottom: 8px;
     display: block;
-    background-color: white;
+    background: var(--white);
     width: 30px;
     transition: transform .5s ease;
 }
@@ -135,7 +139,7 @@ header .ham-burger.active span:nth-child(2){
     bottom: 50px;
     width: 26px;
     height: 40px;
-    border: 1px solid white;
+    border: 1px solid var(--white);
     display: block;
     border-radius: 4px;
     text-align: center;
@@ -143,12 +147,17 @@ header .ham-burger.active span:nth-child(2){
     margin-left: -13px;
 }
 .home .go-down .fa{
-    color: white;
+    color: var(--white);
     animation: goDown 1s ease infinite;
 }
 @keyframes goDown{
-    0%{transform: translateY(0); opacity: .5;}
-    100%{transform: translateY(10px);}
+    0%{
+        transform: translateY(0); 
+        opacity: .5;
+    }
+    100%{
+        transform: translateY(10px);
+    }
 }
 .home .container{
     display: flex;
@@ -156,10 +165,10 @@ header .ham-burger.active span:nth-child(2){
     flex-grow: 1;
 }
 .home .container span{
-    color: red;
+    color: var(--dark-red);
 }
 .home .main_slogan{
-    color: white;
+    color: var(--white);
     font-size: 100px;
     font-weight: 700;
     text-transform: uppercase;
@@ -171,7 +180,7 @@ header .ham-burger.active span:nth-child(2){
     opacity: 1;
 }
 .home .second_slogan{
-    color: white;
+    color: var(--white);
     font-size: 40px;
     font-weight: 700;
     transform: scale(0);
@@ -187,9 +196,6 @@ header .ham-burger.active span:nth-child(2){
 .about{
     padding: 80px 15px;
 }
-.about .container{
-    background-color: white;
-}
 .about .content{
     display: flex;
     flex-wrap: wrap;
@@ -200,14 +206,14 @@ header .ham-burger.active span:nth-child(2){
     padding:15px;  
 }
 .about .content .box .inner{
-    background-color: black;
+    background: var(--black);
     padding: 30px;
     height: 100%;
     border-radius: 20px;
     box-shadow: 3px 3px 3px black; 
 }
 .about .content .box:nth-child(1) .inner{
-    background-color: #c11325;
+    background: var(--dark-red);
 }
 .about .content .box .inner .img img{
     width: 100%;
@@ -221,7 +227,7 @@ header .ham-burger.active span:nth-child(2){
     margin: 0;
     padding: 0px 0px 15px;
     font-weight: 400;
-    color: white;
+    color: var(--white);
     text-align: center;
     text-transform: capitalize;
 }
@@ -230,15 +236,12 @@ header .ham-burger.active span:nth-child(2){
 .about .content .box .inner .text ul li{
     font-size: 15px;   
     line-height: 20px;
-    color: #c1c1c1;
+    color: var(--white);
 }
 /*Service section*/
 .service{
     padding: 80px 15px;
-    background-color: #c11325;
-}
-.service .container{
-    background-color: #c11325;
+    background: var(--dark-red);
 }
 .service h1{
     font-size: 2.5rem;
@@ -255,11 +258,11 @@ header .ham-burger.active span:nth-child(2){
     padding: 15px;  
 }
 .service .content .box .iner{
-    background-color: rgb(0, 0, 0, 0.5);
+    background: rgb(0, 0, 0, 0.5);
     padding: 30px;
     height: 100%;
     border-radius: 20px;
-    box-shadow: 3px 3px 3px black; 
+    box-shadow: 1px 1px 1px var(--black); 
 }
 .service .content .text1 h2,
 .service .content .text2 h2,
@@ -267,7 +270,7 @@ header .ham-burger.active span:nth-child(2){
 .service .content .text4 h2{
     font-size: 20px;
     font-weight: 500;
-    color: white;
+    color: var(--white);
     padding: 10px;
     letter-spacing: 1px;
 }
@@ -314,12 +317,12 @@ header .ham-burger.active span:nth-child(2){
     width: 500px;
     margin: 10px;
     padding-bottom: 20px;
-    box-shadow: 3px 3px 3px black; 
+    box-shadow: 1px 1px 1px var(--black); 
 }
 .classes .content .text h2{
     font-size: 30px;
     font-weight: 500;
-    color: #000000;
+    color: var(--black);
     padding: 0px 0px 20px;
 }
 .classes .content .text p{
@@ -341,13 +344,13 @@ header .ham-burger.active span:nth-child(2){
     overflow: hidden;
 }
 .classes .content .class-items .item:nth-child(1){
-    background-color: #222222;
-    box-shadow: 3px 3px 3px black; 
+    background: var(--black);
+    box-shadow: 1px 1px 1px var(--black); 
 }
 .classes .content .class-items .item:nth-child(2){
-    background-color: #c11325;
-    box-shadow: 3px 3px 3px black; 
-    margin-bottom: 0;
+    background: var(--dark-red);
+    box-shadow: 1px 1px 1px var(--black); 
+    margin-bottom: -90px;
 }
 .classes .content .class-items .item .item-text{
     padding: 15px;
@@ -367,7 +370,7 @@ header .ham-burger.active span:nth-child(2){
     font-size: 20px;
     padding: 0 0 15px;
     font-weight: 500;
-    color: white;
+    color: var(--white);
     text-transform: capitalize;
     text-align: justify;
 }
@@ -375,7 +378,7 @@ header .ham-burger.active span:nth-child(2){
 .classes .content .class-items .item .item-text ul{
     font-size: 14px;
     line-height: 20px;
-    color: white;
+    color: var(--white);
     text-align: justify;
     padding: 0 0 10px;
     font-family: 'open Sans', sans-serif;
@@ -399,7 +402,7 @@ header .ham-burger.active span:nth-child(2){
 .schedule .content .text h2{
     font-size: 30px;
     font-weight: 500;
-    color: #000000;
+    color: var(--black);
     padding: 0px 0px 20px;
 }
 .schedule .content .text p,
@@ -419,32 +422,32 @@ header .ham-burger.active span:nth-child(2){
 }    
 .schedule .content .text img{
     width: 100%;
-    box-shadow: 3px 3px 3px black;
+    box-shadow: 1px 1px 1px var(--black);
     margin-bottom: 20px;
 }
 .schedule .content .timing{
     flex: 1;
-    background-color: white;
+    background: var(--white);
 }
 .schedule .content .timing .table{
     width: 100%;
     border-collapse: collapse;
 }
 .schedule .content .timing .table td{
-    border: 1px solid #f5f5f5;
+    border: 1px solid var(--white);
     padding: 8px;
     font-size: 15px;
     text-align: center;
-    color: #222222;
+    color: var(--black);
 }
 .schedule .content .timing .table tr:nth-child(even) td.day{
-    background-color: #222222;
+    background: var(--black);
 }
 .schedule .content .timing .table tr:nth-child(odd) td.day{
-    background-color: #c11325;
+    background: var(--dark-red);
 }
 .schedule .content .timing .table tr td.day{
-    color: #ffffff;
+    color: var(--white);
 }
 .schedule .content .timing .table td ul{
     padding: 0px 15px;
@@ -462,11 +465,11 @@ header .ham-burger.active span:nth-child(2){
     flex: 0 0 50%;
     max-width: 50%;
     padding: 15px 15px;
-    background-color: black;
+    background: var(--black);
 }
 .gallery .content .box img{
     display: block;
-    box-shadow: 3px 3px 3px #c11325;
+    box-shadow: 1px 1px 1px var(--dark-red);
     width: 100%;
     /**Chỉnh hiệu ứng màu cho ảnh khi di chuột vào khi bình thường ảnh không màu*/
     transition: all .5 ease;
@@ -483,21 +486,18 @@ header .ham-burger.active span:nth-child(2){
     font-size: 30px;
     font-weight: 500;
     letter-spacing: 1px;
-    color: #000000;
+    color: var(--black);
     padding: 0px 0px 20px;
 }
 /*Price section*/
 .price-package{
     padding: 80px 0px;
 }
-.price-package .container{
-    background-color: transparent;
-}
 .price-package h2{
     font-size: 30px;
     font-weight: 500;
     letter-spacing: 1px;
-    color: #000000;
+    color: var(--black);
     padding: 0px 0px 20px;
     text-align: center;
 }
@@ -532,7 +532,7 @@ header .ham-burger.active span:nth-child(2){
     font-weight: 700;
     text-align: center;
     background-color: #222222;
-    color: #ffffff;
+    color: var(--white);
 }
 .price-package .content .box .inner .text{
     padding: 30px 15px;
@@ -563,8 +563,8 @@ header .ham-burger.active span:nth-child(2){
 .price-package .content .box .inner .text .btn-price{
     padding: 8px 30px;
     margin-top: 15px;
-    background-color: #c11325;
-    color: #ffffff;
+    background: var(--dark-red);
+    color: var(--white);
     text-decoration: none;
     display: inline-block;
     border: 1px solid transparent;/**transparent là trong suốt*/
@@ -582,7 +582,7 @@ header .ham-burger.active span:nth-child(2){
 }
 /*Contact section*/
 footer{
-    background: rgba(0, 0, 0, .1);
+    background: var(--white);
     padding: 20px 30px;
     position: relative;
 }
@@ -607,14 +607,14 @@ footer{
     font-family: 'Nunito', sans-serif;
     text-decoration: none;
     font-weight: 700;
-    background: linear-gradient(to right,red,#c11325,#494964,#6f6f89);
+    background: linear-gradient(to right, var(--dark-red),#c11325,#494964,#6f6f89);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 .left-col .content p span{
-    color: #c11325;
+    color: var(--dark-red);
     padding-right: 5px;
-    border-right: 2px solid #c11325;
+    border-right: 2px solid var(--dark-red);
 }
 .left-col .content p{
     color: #222222;
@@ -650,7 +650,7 @@ footer{
     width: 50px;
     height: 5px;
     margin-bottom: 1.5rem;
-    background: #c11325;
+    background: var(--dark-red);
 }
 .center-col .content img{
     height: 20px;
@@ -683,7 +683,7 @@ footer{
 .center-col h1,
 .right-col h1{
     font-size: 1.3rem;
-    color: #c11325;
+    color: var(--dark-red);
 }
 .content p{
     margin-bottom: .3rem;
@@ -718,13 +718,13 @@ footer{
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    border: 2px solid #c11325;
-    background-color: white;
+    border: 2px solid var(--dark-red);
+    background: var(--white);
     text-align: center;
     animation: pulseColor 1s infinite;
 }
 .go-up .fa{
-    color: #c11325;
+    color: var(--dark-red);
     margin-top: .8rem;
     animation: goUp .9s infinite;
 }
