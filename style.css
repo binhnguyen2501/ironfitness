@@ -706,6 +706,7 @@ footer{
     color: #293043;
     background: #dddddd;
     border: none;
+    transition: all .5s ease;
 }
 .btn:hover{
     color: #dddddd;
