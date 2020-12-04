@@ -704,13 +704,13 @@ footer{
     margin-left: 0.2rem;
     font-size: 16px;
     color: #293043;
-    background: #dddddd;
+    background: var(--white);
     border: none;
     transition: all .5s ease;
 }
 .btn:hover{
-    color: #dddddd;
-    background-color: black;
+    color: var(--white);
+    background: var(--black);
 }
 .go-up{
     position: absolute;
@@ -846,7 +846,7 @@ footer{
         flex-direction: column;
     }
     .container-footer .left-col{
-        border-bottom: 2px solid black;
+        border-bottom: 2px solid var(--black);
         text-align: center;
     }
     .left-col .social-media{
