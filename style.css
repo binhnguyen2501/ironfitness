@@ -704,12 +704,12 @@ footer{
     margin-left: 0.2rem;
     font-size: 16px;
     color: #293043;
-    background: var(--white);
+    background: #dddddd;
     border: none;
     transition: all .5s ease;
 }
 .btn:hover{
-    color: var(--white);
+    color: #dddddd;
     background: var(--black);
 }
 .go-up{
