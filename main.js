@@ -3,10 +3,12 @@ $(document).ready(function(){
     $(".ham-burger").click(function(){
         $(".nav").toggleClass("open");
         $(this).toggleClass("active");
+        $(".overlay").toggleClass("show");
     })
     $(".nav-link").click(function(){
         $(".nav").removeClass("open");
         $(".ham-burger").removeClass("active");
+        $(".overlay").toggleClass("show");
     })
 })
 /*Cursor*/
