@@ -59,6 +59,7 @@ html {
 	bottom: 0;
 	left: 0;
 	right: 0;
+	animation: fadeIn linear 0.3s;
 }
 .overlay.show {
 	display: block;
@@ -104,7 +105,7 @@ header .nav {
 	height: 100%;
 	z-index: 99;
 	padding: 150px 0px 15px;
-	transition: transform 0.5s ease;
+	transition: transform linear 0.3s;
 	transform: translateX(100%);
 }
 header .nav.open {
@@ -1113,5 +1114,13 @@ footer {
 	}
 	100% {
 		transform: translate(1px, 0px) rotate(0deg);
+	}
+}
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
 	}
 }
