@@ -59,7 +59,7 @@ html {
 	bottom: 0;
 	left: 0;
 	right: 0;
-	animation: fadeIn linear 0.3s;
+	animation: fadeIn linear 0.2s;
 }
 .overlay.show {
 	display: block;
@@ -105,11 +105,13 @@ header .nav {
 	height: 100%;
 	z-index: 99;
 	padding: 150px 0px 15px;
-	transition: transform linear 0.3s;
+	transition: all linear 0.2s;
 	transform: translateX(100%);
+	opacity: 0;
 }
 header .nav.open {
 	transform: translateX(0);
+	opacity: 1;
 }
 header .nav ul {
 	list-style: none;
