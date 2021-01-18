@@ -16,16 +16,7 @@ html {
 	font-family: "Oswald", sans-serif;
 	cursor: none;
 }
-.overlay {
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-}
-.overlay.show {
-	background-color: rgba(0, 0, 0, 0.5);
-}
+
 /*Header*/
 header {
 	position: fixed;
@@ -1112,4 +1103,16 @@ footer {
 }
 .link-grow_cursor2 {
 	opacity: 0;
+}
+.overlay {
+	position: fixed;
+	display: none;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.overlay.show {
+	display: block;
+	background-color: rgba(0, 0, 0, 0.5);
 }
